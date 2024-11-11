@@ -4,3 +4,5 @@
 <title>SISTEMA DE GESTION DE TRABAJOS DE TITULACION (SGTT)</title>
 <link rel="stylesheet" href="./css/bulma.min.css">
 <link rel="stylesheet" href="./css/estilos.css">
+
+        

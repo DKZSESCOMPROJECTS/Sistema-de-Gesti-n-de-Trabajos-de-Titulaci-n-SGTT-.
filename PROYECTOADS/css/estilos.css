@@ -1,0 +1,44 @@
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > .login,
+.main-container > .hero-body{
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.form-inline{
+    display: inline-flex;
+}
+
+
+/* Estilo para el título principal */
+.custom-title {
+    font-size: 4rem; /* Tamaño grande */
+    font-weight: bold; /* Texto en negrita */
+    color: hsl(0, 0%, 100%); /* Color azul (puedes elegir el que prefieras) */
+    margin-bottom: 20px; /* Espaciado inferior */
+    text-transform: uppercase; /* Mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+}
+
+/* Estilo para el subtítulo */
+.custom-subtitle {
+    font-size: 2rem; /* Tamaño más pequeño que el título */
+    color: hsl(0, 0%, 100%); /* Color gris */
+    font-weight: 300; /* Peso normal */
+    margin-top: 10px; /* Espaciado superior */
+    letter-spacing: 1px; /* Espaciado entre letras */
+}

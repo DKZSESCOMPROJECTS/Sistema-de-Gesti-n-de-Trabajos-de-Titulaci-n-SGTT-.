@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="https://www.friv.com/">
+    <a class="navbar-item" href="http://localhost/mi_proyecto/index.php?vista=home">
       <img src="./img/LOGO1.png" width="70" height="40">
     </a>
 
@@ -19,17 +19,18 @@
             <a class="navbar-link">ACCIONES</a>
 
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">REGISTRAR</a>
-                    <a class="navbar-item">MODIFICAR</a>
+                    <a class="navbar-item" href="index.php?vista=new_user">Nuevo usuario</a>
+                    <a class="navbar-item" href="index.php?vista=nuevatesis">Nueva Tesis </a>
+                    <a class="navbar-item" href="index.php?vista=modificartesis">Modificar tesis</a>
             </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">CONSULTAR POR:</a>
 
                   <div class="navbar-dropdown">
-                    <a class="navbar-item">NOMBRE DEL ESTUDIANTE</a>
-                    <a class="navbar-item">PALABRAS CLAVE</a>
-                    <a class="navbar-item">ACADEMIA</a>
+                    <a class="navbar-item" href="index.php?vista=Buscador_Nombre_E">Nombre del estudiante</a>
+                    <a class="navbar-item" href="index.php?vista=Buscador_KeyWords">Palabras clave</a>
+                    <a class="navbar-item" href="index.php?vista=Buscador_Academia">Academia</a>
             </div>
         </div>
     </div>
