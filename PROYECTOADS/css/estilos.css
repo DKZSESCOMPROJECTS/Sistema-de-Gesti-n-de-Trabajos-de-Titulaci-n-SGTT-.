@@ -11,6 +11,7 @@ body,html{
     align-items: center;
 }
 
+
 .main-container > .login,
 .main-container > .hero-body{
     height: auto;
@@ -41,4 +42,25 @@ body,html{
     font-weight: 300; /* Peso normal */
     margin-top: 10px; /* Espaciado superior */
     letter-spacing: 1px; /* Espaciado entre letras */
+}
+
+.main-container2 {
+    height: 100vh; /* Altura completa */
+    display: flex;
+    flex-direction: column; /* Disposición vertical */
+    justify-content: 0; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+
+.buttons-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espaciado entre botones */
+    margin-bottom: 2rem; /* Separación entre filas */
+}
+
+.fixed-size {
+    width: 100%; /* Hace que el botón ocupe toda la fila */
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    padding: 1rem; /* Espaciado interno del botón */
 }

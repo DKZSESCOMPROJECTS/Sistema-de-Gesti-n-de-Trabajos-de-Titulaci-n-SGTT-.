@@ -24,8 +24,8 @@
 		<div class="columns">
 		  	<div class="column">
 		    	<div class="control">
-					<label>Usuario</label>
-				  	<input class="input" type="text" name="usuario_usuario" pattern="[a-zA-Z0-9]{4,20}" maxlength="20" required >
+					<label>Numero de boleta</label>
+				  	<input class="input" type="text" name="usuario_usuario" pattern="[0-9]{10}" maxlength="10" required >
 				</div>
 		  	</div>
 		  	<div class="column">

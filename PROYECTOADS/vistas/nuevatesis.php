@@ -23,13 +23,13 @@
                 <div class="column">
                     <div class="control">
                         <label>Nombres</label>
-                        <input class="input" type="text" name="usuario_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
+                        <input class="input" type="text" name="T_nombre" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
                     </div>
                 </div>
                 <div class="column">
                     <div class="control">
                         <label>Apellidos</label>
-                        <input class="input" type="text" name="usuario_apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
+                        <input class="input" type="text" name="T_apellido" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{3,40}" maxlength="40" required>
                     </div>
                 </div>
             </div>
