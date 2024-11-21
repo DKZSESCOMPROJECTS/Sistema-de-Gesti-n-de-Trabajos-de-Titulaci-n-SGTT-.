@@ -12,19 +12,6 @@
 
         }
 
-        #NO JALO SE REEMPLAZA ABAJO este codigo lo puedo usar para impedir que registren una tesis sin estar registrados
-        /*if(is_file("./vistas/".$_GET['vista'].".php") && $_GET['vista']!="login" && $_GET['vista']!="404"  &&  $_GET['vista']!="consulta"
-        &&  $_GET['vista']!="Basesor" &&  $_GET['vista']!="Buscador_KeyWords" &&  $_GET['vista']!="Buscador_Nombre_E"){
-           #cerrar sesion forzado para que no manipulen el url
-           if((!isset($_SESSION['id'])|| $_SESSION['id']=="") || (!isset($_SESSION['nombre'])|| $_SESSION['nombre']=="") || $_GET['vista']!="consulta"){
-             
-                        session_destroy();
-                        if (headers_sent()) {
-                            echo "<script> window.location.href='index.php?vista=login'; </script>";
-                        } else {
-                            header("Location: index.php?vista=login");
-                        }
-           }*/
 // Verifica que el archivo exista y que la vista no sea una de las permitidas sin autenticación
             if (is_file("./vistas/" . $_GET['vista'] . ".php") && 
                     !in_array($_GET['vista'], ["login", "404", "consulta", "Basesor", "Buscador_KeyWords", "Buscador_Nombre_E", "Todo", "new_user"])) {
@@ -42,7 +29,7 @@
                         } else {
                             header("Location: index.php?vista=login");
                         }
-                        exit; // Asegúrate de detener el script después de la redirección
+                        exit; // detener el script después de la redirección
                     }        
             include "./inc/navbar.php";
             include "./vistas/".$_GET['vista'].".php";
@@ -53,7 +40,7 @@
                     include "./inc/navbar2.php"; 
                     include "./vistas/login.php";
 
-                }elseif ($_GET['vista']=="consulta" ){# || $_GET['vista']="Basesor" ||  $_GET['vista']="Buscador_KeyWords" ||  $_GET['vista']="Buscador_Nombre_E" ||  $_GET['vista']="Todo") {
+                }elseif ($_GET['vista']=="consulta" ){
                     include "./inc/navbar2.php"; 
                     include "./vistas/consulta.php";
                     include "./inc/script.php";

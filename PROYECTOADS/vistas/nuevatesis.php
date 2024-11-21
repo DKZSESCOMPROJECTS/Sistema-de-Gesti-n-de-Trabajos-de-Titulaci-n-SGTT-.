@@ -116,33 +116,6 @@
             </div>
         </div>
 
-        <!-- Sección de Carrera  pero no se si ponerlo porque se pregunta arriba
-            <div class="box">
-                <h2 class="title is-4">Carrera</h2>
-                <div class="field">
-                    <label class="label">ID de Carrera</label>
-                    <div class="control">
-                        <div class="select">
-                            <select name="carrera_id" required>
-                                <option value="">Seleccione una opción</option>
-                                <option value="1">Ingeniería en Sistemas Computacionales</option>
-                                <option value="2">Ingeniería en Inteligencia Artificial</option>
-                                <option value="3">Licenciatura en Ciencia de Datos</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="columns">
-                <div class="column">
-                    <div class="control">
-                        <label>Nombre de la Escuela</label>
-                        <input class="input" type="text" pattern="[a-zA-ZáéíóúÁÉÍÓÚñÑ ]{2,50}" maxlength="50" required>
-                </div>
-            </div>
-            </div>
-            
-            -->
-
         <!-- Botón Guardar -->
         <p class="has-text-centered">
             <button type="submit" class="button is-info is-rounded">Guardar</button>

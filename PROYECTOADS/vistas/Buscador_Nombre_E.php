@@ -1,7 +1,6 @@
-buscador por nombre del estudiante
 <div class="container is-fluid mb-6">
-    <h1 class="title">Usuarios</h1>
-    <h2 class="subtitle">Buscar por autor</h2>
+    <h1 class="title">Buscador Principal</h1>
+    <h2 class="subtitle">Buscar General</h2>
 </div>
 
 <div class="container pb-6 pt-6">

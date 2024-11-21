@@ -18,9 +18,7 @@
             <a class="navbar-link">CONSULTAR POR:</a>
 
                   <div class="navbar-dropdown">
-                    <a class="navbar-item" href="index.php?vista=Buscador_Nombre_E">Nombre del estudiante</a>
-                    <a class="navbar-item" href="index.php?vista=Buscador_KeyWords">Palabras clave</a>
-                    <a class="navbar-item" href="index.php?vista=Basesor">Asesor</a>
+                    <a class="navbar-item" href="index.php?vista=Buscador_Nombre_E">Buscador</a>
                     <a class="navbar-item" href="index.php?vista=Todo">Mostrar todas</a>
             </div>
         </div>
