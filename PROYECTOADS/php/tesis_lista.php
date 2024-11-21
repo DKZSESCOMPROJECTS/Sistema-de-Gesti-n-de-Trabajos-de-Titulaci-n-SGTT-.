@@ -3,7 +3,7 @@ $inicio = ($pagina > 0) ? (($pagina * $registros) - $registros) : 0;
 $tabla = "";
 
 if (isset($busqueda) && $busqueda != "") {
-    $consulta_datos="SELECT * FROM tesiss WHERE ((Titulo LIKE '%$busqueda%' 
+    $consulta_datos="SELECT * FROM documentot WHERE ((Titulo LIKE '%$busqueda%' 
     OR Resumen LIKE '%$busqueda%' 
     OR Palabras_Clave LIKE '%$busqueda%' 
     OR Id_Tesis LIKE '%$busqueda%')) 
@@ -11,15 +11,15 @@ if (isset($busqueda) && $busqueda != "") {
 
 
     $consulta_total = "SELECT COUNT(Id_Tesis) 
-        FROM tesiss 
+        FROM documentot 
         WHERE (Titulo LIKE '%$busqueda%' 
         OR Palabras_Clave LIKE '%$busqueda%' 
         OR Id_Carrera LIKE '%$busqueda%'
          OR Resumen LIKE '%$busqueda%')";
 } else {
     // Consulta general de tesis
-    $consulta_datos = "SELECT * FROM tesiss ORDER BY Id_Tesis ASC LIMIT $inicio, $registros";
-    $consulta_total = "SELECT COUNT(Id_Tesis) FROM tesiss";
+    $consulta_datos = "SELECT * FROM documentot ORDER BY Id_Tesis ASC LIMIT $inicio, $registros";
+    $consulta_total = "SELECT COUNT(Id_Tesis) FROM documentot";
 }
 
 // Establecer conexión
@@ -41,7 +41,7 @@ $tabla .= '
     <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
         <thead>
             <tr class="has-text-centered">
-                <th>#Id</th>
+                <th>#</th>
                 <th>Titulo</th>
                 <th>Resumen</th>
                 <th>Palabras clave</th>
@@ -64,7 +64,7 @@ if ($total >= 1 && $pagina <= $Npaginas) {
                 <td>' . $rows['Palabras_Clave'] . '</td>
                 <td>' . $rows['Id_Carrera'] . '</td>
                 <td>
-                    <a href="index.php?vista=user_update&user_id_up=' . $rows['usuario_id'] . '" 
+                    <a href="index.php?vista=tesisview&T_id=' . $rows['Id_Tesis'] . '" 
                         class="button is-success is-rounded is-small">Mas informacion</a>
                 </td>
             </tr>

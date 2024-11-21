@@ -1,4 +1,3 @@
-
 <div class="container is-fluid mb-6 custom-background">
     <h1 class="title custom-title">Repositorio de tesis de ESCOM</h1>
     <h2 class="subtitle custom-subtitle">Formulario para subir una tesis</h2>
@@ -115,7 +114,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Botón Guardar -->
         <p class="has-text-centered">
             <button type="submit" class="button is-info is-rounded">Guardar</button>

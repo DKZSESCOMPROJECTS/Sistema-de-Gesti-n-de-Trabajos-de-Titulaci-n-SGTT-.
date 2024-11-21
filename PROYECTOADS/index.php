@@ -14,7 +14,7 @@
 
 // Verifica que el archivo exista y que la vista no sea una de las permitidas sin autenticación
             if (is_file("./vistas/" . $_GET['vista'] . ".php") && 
-                    !in_array($_GET['vista'], ["login", "404", "consulta", "Basesor", "Buscador_KeyWords", "Buscador_Nombre_E", "Todo", "new_user"])) {
+                    !in_array($_GET['vista'], ["login","tesisview", "404", "consulta", "Basesor", "Buscador_KeyWords", "Buscador_Nombre_E", "Todo", "new_user","nuevatesis"])) {
 
                     // Verifica si el usuario no está autenticado
                     if (!isset($_SESSION['id']) || empty($_SESSION['id']) || 
@@ -65,12 +65,22 @@
                     include "./inc/navbar2.php"; 
                     include "./vistas/Basesor.php";
                     include "./inc/script.php";
-                }   
+                }
+                elseif($_GET['vista']=="tesisview"){
+                    include "./inc/navbar2.php"; 
+                    include "./vistas/tesisview.php";
+                    include "./inc/script.php";
+                }    
                  elseif($_GET['vista']=="new_user"){
                     include "./inc/navbar2.php"; 
                     include "./vistas/new_user.php";
                     include "./inc/script.php";
-                }            
+                }   
+                elseif($_GET['vista']=="nuevatesis"){
+                    include "./inc/navbar2.php"; 
+                    include "./vistas/nuevatesis.php";
+                    include "./inc/script.php";
+                }           
                 else {
                     include "./vistas/404.php";
                 }
