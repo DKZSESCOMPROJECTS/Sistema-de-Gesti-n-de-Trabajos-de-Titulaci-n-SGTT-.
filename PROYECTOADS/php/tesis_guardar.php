@@ -19,10 +19,7 @@ $tresumen = limpiar_cadena($_POST['tesis_resumen']);
 # Conexión a la base de datos
 
 $conexion = conexion();
-/*
-if (!$conexion) {
-    die("Error en la conexión: " . $conexion->connect_error);
-}else { echo "Conexion exitosa";}*/
+
 # Consulta para guardar el autor
 $query_autor = $conexion->query("INSERT INTO autor(boleta, nombre, apellidos, correo, telefono, Id_carrera) 
 VALUES ('$boleta', '$nombret', '$apellidot', '$correo', '$telefono', '$id_carrera')");
@@ -41,23 +38,36 @@ if ($query_autor) {
         </div>
     ';}
 
-# Consulta para guardar la tesis
-$query_tesis = conexion()->query("INSERT INTO documentot(Titulo, Resumen, Fecha_Publicacion, Palabras_Clave, Id_Carrera, Asesor) 
+// Consulta para guardar la tesis
+$query_tesis = $conexion->query("INSERT INTO documentot(Titulo, Resumen, Fecha_Publicacion, Palabras_Clave, Id_Carrera, Asesor) 
 VALUES('$ttitulo', '$tresumen', '$fecha', '$tpc', '$id_carrera', '$tasesor')");
 
 if ($query_tesis) {
+    // Recuperar el último ID autogenerado
+    $Id_tesis = $conexion->insert_id;
+    echo "$Id_Tesis";
+
+    // Consulta para guardar datos en la tabla de tesis_autor
+    $query_TyA = $conexion->query("INSERT INTO tesis_autor(Id_Tesis, boleta) 
+    VALUES('$Id_tesis', '$boleta')");
+
+    if ($query_TyA) {
+        echo '
+            <div class="notification is-info is-light">
+                <strong>REGISTRO COMPLETO!</strong><br>
+                El trabajo se registraron con éxito
+            </div>
+        ';
+    }
+} else {
     echo '
-        <div class="notification is-info is-light">
-            <strong>TRABAJO REGISTRADO!</strong><br>
-            El trabajo se registró con éxito
+        <div class="notification is-danger is-light">
+            <strong>¡Ocurrió un error inesperado!</strong><br>
+            No se pudo registrar el trabajo, por favor intente nuevamente
         </div>
-    ';} else {
-    echo '
-    <div class="notification is-danger is-light">
-        <strong>¡Ocurrió un error inesperado!</strong><br>
-        No se pudo registrar el trabajo, por favor intente nuevamente
-    </div>
-';}
+    ';
+}
+
 # Cierre de la conexión
 $conexion->close();
 
