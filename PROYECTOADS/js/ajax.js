@@ -5,7 +5,7 @@ const formularios_ajax=document.querySelectorAll(".FormularioAjax");
 function enviar_formulario_ajax(e){
     e.preventDefault();
 
-    let enviar=confirm("Quieres enviar el formulario");
+    let enviar=confirm("Quieres enviar el formulario. Revisa la ortografía.");
 
     if(enviar==true){
             /*creamos datos a apartir del formulario */
